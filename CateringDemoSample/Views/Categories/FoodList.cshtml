@@ -1,0 +1,21 @@
+﻿@model IEnumerable<CateringDemoSample.Models.Food>
+
+@{
+    ViewData["Title"] = "FoodList";
+}
+
+<h1>FoodList</h1>
+
+@*<p>
+        <a asp-action="Create">Create New</a>
+    </p>*@
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-md-6">
+            @Html.EditorForModel() 
+        </div>
+    </div>
+    <input type="submit" value="Submit"/>
+}
+
